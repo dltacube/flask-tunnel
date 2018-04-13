@@ -11,15 +11,8 @@ except ImportError:
 
 
 class Tunnel(object):
-    # remote_bind = ('127.0.0.1', 5432), local_bind = ('localhost', 5432)
-    def __init__(self, *args, **kwargs):
+    def __init__(self, app, *args, **kwargs):
         self.tunnel = SSHTunnelForwarder(*args, **kwargs)
-
-        # self.host= host
-        # self.ssh_username=user
-        # self.ssh_pkey=pkey
-        # self.remote_bind_address=remote_bind
-        # self.local_bind_address=local_bind
 
         self.app = app
         if app is not None:
@@ -30,8 +23,6 @@ class Tunnel(object):
     # Only works if you don't override self.app
     # Don't use self.app but take in an app object each time you connect/teardown
     def init_app(self, app):
-        # app.config.setdefault('SQLITE3_DATABASE', ':memory:')
-
         # Use the newstyle teardown_appcontext if it's available,
         # otherwise fall back to the request context
         app.config.setdefault('')
