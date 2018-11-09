@@ -6,6 +6,12 @@ in a specific development mode. I find it useful to run/debug on my flask applic
 having to leave a tunnel open. This makes your app more portable and is helpful if your database is too large
 to be considered portal
 
+## Installation
+
+`pip install Flask-sshtunnel`
+
+link to [pypi](https://pypi.org/project/Flask-sshtunnel/)
+
 ## Example
 
 This example assumes you're trying to access a postgresql server. Initialize a `Tunnel` object.

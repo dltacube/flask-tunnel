@@ -10,7 +10,7 @@ from setuptools import setup
 
 setup(
     name='Flask-sshtunnel',
-    version='0.1b1',
+    version='0.1b2',
     url='https://github.com/heyoni/flask-tunnel',
     license='MIT',
     author='Jonathan Revah',
@@ -28,7 +28,7 @@ setup(
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Framework :: Flask',
